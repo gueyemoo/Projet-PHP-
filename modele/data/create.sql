@@ -8,6 +8,6 @@ CREATE TABLE Produit (
       reference STRING,
       taille STRING,
       vendeur STRING,
-      disponibilite STRING
-      cover STRING,
+      disponibilite STRING,
+      cover STRING
 );
