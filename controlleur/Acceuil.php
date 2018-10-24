@@ -12,7 +12,7 @@
   foreach ($promos as $reference => $value) {
 
     $a = $dao->read($reference,$value);
-    $centre[] = $a; 
+    $centre[] = $a;
   }
 
 
@@ -73,7 +73,6 @@
 
     </div>
 
-
       <div id="body">
         <div class="colonne-gauche">
             <h2>Promotion</h2>
@@ -85,13 +84,17 @@
           </div>
 
         <div class="colonne-centre">
-            CONTENU CENTRE
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
+          <?php foreach ($centre as $a) : ?>
+            <div class="Produit">
+              <img <?= $a->cover ?>  alt=<?=$a->reference?>>
+                <div class="Info-Produit">
+                  <p> <?=$a->type ?> <?=$a->taille?> </p> &nbsp;
+                  <p>  <?=$a->prix?> <p>
+                </div>
+            </div>
+
+
+
         <div class="colonne-droite">
            <h2>Publicité</h2>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit,
