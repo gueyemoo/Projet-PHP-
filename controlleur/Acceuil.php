@@ -1,20 +1,21 @@
 <?php
-  require_once('ProduitclassDAO.php');
+  require_once('../modele/data/ProduitclassDAO.php');
 
-  $dao = new DAO();
+  $dao = new ProduitDAO();
 
   $promos = array(
-    //mettre références des objets en promo
-  )
+    '1','2','3','4'
+  );
 
   $centre = array();
 
-  foreach ($promos as $reference => $value) {
+  foreach ($promos as $id) {
 
-    $a = $dao->read($reference,$value);
+    $a = $dao->read($id);
     $centre[] = $a;
   }
 
+  $marques = $dao.getMarques();
 
  ?>
 
@@ -26,7 +27,7 @@
 <head>
 <title>VMS SKI - Acceuil</title>
 <meta http-equiv="content-type" content="text/html; charset =iso-8859-1">
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="../style.css">
 <style>
       @font-face { font-family: Vogue; src: url('Vogue.ttf'); }
       @font-face { font-family: Office; src: url('Office.otf'); }
@@ -75,12 +76,14 @@
 
       <div id="body">
         <div class="colonne-gauche">
-            <h2>Promotion</h2>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <fieldset>
+              <legend>Marques</legend>
+              <?php foreach ($marques as $m): ?>
+                <div>
+                  <input type="checkbox" id=<?= $m ?> value=<?= $m ?>/>
+                </div>
+              <?php endforeach; ?>
+            </fieldset>
           </div>
 
         <div class="colonne-centre">
@@ -91,6 +94,7 @@
                   <p> <?=$a->type ?> <?=$a->taille?> </p> &nbsp;
                   <p>  <?=$a->prix?> <p>
                 </div>
+            <?php endforeach; ?>
             </div>
 
 

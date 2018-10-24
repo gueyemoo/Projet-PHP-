@@ -1,7 +1,7 @@
 <?php
 $config = parse_ini_file('../config/config.ini');
 var_dump($config);
-require_once('Produitclass.php');
+require_once('D:\Cours\PHP\Projet-PHP-\modele\Produitclass.php');
 class ProduitDAO
 {
   private $db;
@@ -16,17 +16,30 @@ class ProduitDAO
     }
   }
 
+function read(int $id) : Produit{
+  $req = "SELECT * FROM Produit WHERE id = '$id'";
+  $res = $this->db->query($req);
+  $result = $res->fetch();
+  return $result;
+}
 
-  function get(int $id):Produit{
-    $requ="SELECT * FROM produit WHERE id='$id'";
+  function getId(int $id):Produit{
+    $requ="SELECT * FROM Produit WHERE id='$id'";
     $res = $this->db->query($requ);
     $result = $res->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, "Produit");
 
     return $result[0];
   }
 
+  function getMarques():Produit{
+    $requ="SELECT DISTINCT marque FROM Produit";
+    $res = $this->db->query($requ);
+    $result = $res->fetch();
+    return $result;
+  }
+
   function nb():int{
-    $requ="SELECT count(*) FROM produit";
+    $requ="SELECT count(*) FROM Produit";
     $res = $this->db->query($requ);
     $result = $res->fetch();
     return $result[0];
