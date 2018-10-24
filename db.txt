@@ -1,0 +1,102 @@
+1|ski|Materiel|Homme|245.50|Rossignol|Experience 80 Premium|176|Sacha|Oui|
+2|ski|Materiel|Homme|266.99|Volkl|Mantra|178|Sacha|Oui|
+3|ski|Materiel|Homme|312.00|Volkl|Kendo|178|Vincent|Oui|
+4|ski|Materiel|Homme|298.96|Atomic|Vantage 83 R|188|Vincent|Oui|
+5|ski|Materiel|Homme|305.00|Nordica|GT 78|185|Vincent|Oui|
+6|ski|Materiel|Homme|345.95|Dynastar|Legend X80|182|Vincent|Oui|
+7|ski|Materiel|Homme|322.15|Dynastar|speed zone 7|190|Vincent|Oui|
+8|ski|Materiel|Homme|289.99|Rossignol|Smash 7|185|Mohammed|Oui|
+9|ski|Materiel|Homme|294.99|Rossignol|Hero Elite|184|Mohammed|Non|
+10|ski|Materiel|Homme|315.75|Head|I Supershape|181|Sacha|Oui|
+11|ski|Materiel|Homme|299.99|Dynastar|speed zone 5|182|Vincent|Oui|
+12|ski|Materiel|Homme|360.25|Dynastar|speed zone 10|188|Sacha|Oui|
+13|ski|Materiel|Homme|348.60|Dynastar|speed zone 12|185|Vincent|Oui|
+14|ski|Materiel|Homme|318.95|Rossignol|Experience 80 HD|179|Sacha|Oui|
+15|ski|Materiel|Homme|421.95|Rossignol|Experience 84 HD|184|Mohammed|Oui|
+16|ski|Materiel|Homme|405.05|Head|Supreme Instinct|187|Mohammed|Oui|
+17|ski|Materiel|Homme|299.99|Rossignol|Hero Elite|186|Sacha|Non|
+18|ski|Materiel|Homme|398.45|Volkl|Kamgo|188|Mohammed|Oui|
+19|ski|Materiel|Homme|389.00|Rossignol|Pursuit 100|178|Vincent|Oui|
+20|ski|Materiel|Homme|375.98|Rossignol|Experience 88 HD|183|Sacha|Oui|
+21|ski|Materiel|Femme|189.99|Rossignol|Famous 2|170|Mohammed|Oui|
+22|ski|Materiel|Femme|237.95|Volkl|Flair 73|168|Vincent|Oui|
+23|ski|Materiel|Femme|405.30|Dynastar|Intense 12 Light|165|Sacha|Oui|
+24|ski|Materiel|Femme|239.99|Volkl|Kenja|172|Vincent|Oui|
+25|ski|Materiel|Femme|419.95|Volkl|Yumi|168|Mohammed|Oui|
+26|ski|Materiel|Femme|349.99|Dynastar|Legend W75|164|Sacha|Oui|
+27|ski|Materiel|Femme|359.00|Dynastar|Intense8|169|Sacha|Oui|
+28|ski|Materiel|Femme|259.00|Rossignol|Famous 8|171|Vincent|Oui|
+29|ski|Materiel|Femme|459.00|Volkl|Flair 73|175|Sacha|Vincent|Oui|
+30|ski|Materiel|Femme|369.00|Dynastar|Intense 10|172|Vincent|Non|
+31|ski|Materiel|Femme|569.90|Rossignol|Temptation 84 HD|164|Sacha|Oui|
+32|ski|Materiel|Femme|359.25|Atomic|cloud eleven|167|Sacha|Oui|
+33|ski|Materiel|Femme|299.99|Rossignol|Famous 6|162|Mohammed|Oui|
+34|ski|Materiel|Femme|189.00|Rossignol|Famous 10|160|Sacha|Oui|
+35|ski|Materiel|Femme|268.65|Rossignol|Temptation 80|169|Mohammed|Oui|
+36|ski|Materiel|Femme|399.99|Dynastar|Legend W89|172|Sacha|Oui|
+37|ski|Materiel|Femme|312.25|Dordica|Sentra S3|162|Sacha|Oui|
+38|ski|Materiel|Femme|305.00|Blizzard|elevate 7.7|158|Sacha|Oui|
+39|ski|Materiel|Femme|215.65|Head|Great Joy|167|Mohammed|Oui|
+40|ski|Materiel|Femme|268.99|Volkl|Adora|178|Sacha|Non|
+41|Vetements|Chaussures|Homme|179.90|Head|Advant Edge 95|M-L-XL|Sacha|Oui|
+42|Vetements|Chaussures|Homme|149.00|Head|Advant Edge 75|M-L-XL|Mohammed|Non|
+43|Vetements|Chaussures|Homme|149.00|Head|Advant Edge 75N|M-L-XL|Sacha|Oui|
+44|Vetements|Chaussures|Homme|179.99|Rossignol|Evo R|M-L-XL|Sacha|Oui|
+45|Vetements|Chaussures|Homme|189.00|Nordica|NXT 80 R|M-L-XL|Sacha|Oui|
+46|Vetements|Chaussures|Homme|159.00|Head|Next Edge 85|M-L-XL|Mohammed|Oui|
+47|Vetements|Chaussures|Homme|179.25|Tecnica|Ten 2 80 RT|M-L-XL|Mohammed|Oui|
+48|Vetements|Chaussures|Homme|119.00|Rossignol|Evo 70|M-L-XL|Sacha|Oui|
+49|Vetements|Chaussures|Homme|169.15|Head|next Edge 85 HT|M-L-XL|Sacha|Oui|
+50|Vetements|Chaussures|Homme|169.00|Rossignol|Synergie Sensor 120|M-L-XL|Mohammed|Oui|
+51|Vetements|Chaussures|Femme|189.00|Head|Advant Edge 85W|S-M-L|Sacha|Oui|
+52|Vetements|Chaussures|Femme|179.90|Salomon|X Access R60W|S-M-L|Sacha|Oui|
+53|Vetements|Chaussures|Femme|159.90|Head|Advant Edge 65W|S-M-L|Mohammed|Oui|
+54|Vetements|Chaussures|Femme|149.00|Head|Advant Edge 65WN|S-M-L|Mohammed|Oui|
+55|Vetements|Chaussures|Femme|149.00|Head|next Edge 75W|S-M-L|Sacha|Oui|
+56|Vetements|Chaussures|Femme|169.15|Head|Cube 3 70|S-M-L|Sacha|Oui|
+57|Vetements|Chaussures|Femme|199.00|Lange|RX 80 W|S-M-L|Sacha|Non|
+58|Vetements|Chaussures|Femme|239.95|Atomic|Hawx Prime 90W|S-M-L|Sacha|Oui|
+59|Vetements|Chaussures|Femme|189.00|Nordica|NXT 75 W R|S-M-L|Sacha|Oui|
+60|Vetements|Chaussures|Femme|209.00|Lange|RX 80 W|S-M-L|Sacha|Oui|
+61|Snowboard|Materiel|Homme|189.00|Volkl|Disturbia|164|Sacha|Oui|
+62|Snowboard|Materiel|Homme|249.50|Volkl|Alright|168|Sacha|Oui|
+63|Snowboard|Materiel|Homme|199.00|Volkl|Dimension|172|Sacha|Oui|
+64|Snowboard|Materiel|Homme|300.00|Volkl|Squad Prime|158|Sacha|Oui|
+65|Snowboard|Materiel|Homme|319.00|Yes|Basic|166|Mohammed|Oui|
+66|Snowboard|Materiel|Femme|159.00|Volkl|Flavor|135|Mohammed|Oui|
+67|Snowboard|Materiel|Femme|179.00|Volkl|FLavor 2|142|Mohammed|Oui|
+68|Snowboard|Materiel|Femme|349.00|Jones|Twin Sister|140|Sacha|Oui|
+69|Snowboard|Materiel|Femme|159.00|APO|Hype|138|Sacha|Oui|
+70|Snowboard|Materiel|Femme|225.00|Tree|Trip 85|134|Sacha|Oui|
+71|Vetements|Bottes|Homme|155.95|Burton|Ruler|M-L-XL|Sacha|Oui|
+72|Vetements|Bottes|Homme|165.00|Northware|Hover Spin|M-L-XL|Mohammed|Oui|
+73|Vetements|Bottes|Femme|145.00|Burton|Mint|S-M-L|Sacha|Oui|
+74|Vetements|Bottes|Femme|175.25|Roxy|Pink|S-M-L|Mohammed|Oui|
+75|Accessoires|Casque|Mixte|55.00|Salomon|Jib JR|S-M-L|Sacha|Oui|
+76|Accessoires|Casque|Mixte|89.90|Rossignol|Spark Audio|S-M-L|Sacha|Oui|
+77|Accessoires|Casque|Mixte|49.90|Rossignol|Comp J Fun Girl|S-M-L|Mohammed|Oui|
+78|Accessoires|Casque|Mixte|49.90|Rossignol|Comp Pinguin J|S-M-L|Sacha|Oui|
+79|Accessoires|Casque|Mixte|49.90|Rossignol|Comp J|S-M-L|Sacha|Oui|
+80|Accessoires|Casque|Mixte|55.00|Rossignol|Grom JT|S-M-L|Mohammed|Oui|
+81|Vetements|Veste|Hommme|345.00|ARCTERYX|GeoTerm|M-L-XL|Mohammed|Oui|
+82|Vetements|Veste|Hommme|326.00|ARCTERYX|GeoTerm v2|M-L-XL|Mohammed|Oui|
+83|Vetements|Veste|Hommme|299.00|ARCTERYX|X-term|M-L-XL|Sacha|Oui|
+84|Vetements|Veste|Hommme|315.00|ARCTERYX|Frost V4|M-L-XL|Mohammed|Oui|
+85|Vetements|Veste|Hommme|285.00|ARCTERYX|Frost V2|M-L-XL|Mohammed|Oui|
+86|Vetements|Veste|Hommme|299.95|ARCTERYX|P-Snox 65|M-L-XL|Vincent|Oui|
+87|Vetements|Veste|Hommme|300.00|ARCTERYX|P-Snox 75|M-L-XL|Vincent|Oui|
+88|Vetements|Veste|Hommme|257.65|Patagonia|Jane|M-L-XL|Vincent|Oui|
+89|Vetements|Veste|Hommme|289.00|Patagonia|Amazone|M-L-XL|Sacha|Oui|
+90|Vetements|Veste|Hommme|399.00|Patagonia|Parka Pro 98|M-L-XL|Sacha|Oui|
+91|Vetements|Veste|Femme|219.00|Roxy|Gradient 85|S-M-L|Vincent|Oui|
+92|Vetements|Veste|Femme|245.00|SuperDry|Vortex Navy|S-M-L|Vincent|Oui|
+93|Vetements|Veste|Femme|312.99|Picture|Petrol Blue||S-M-L|Vincent|Oui|
+94|Vetements|Veste|Femme|355.00|Scott|Ultimate Down Gallaxy|S-M-L|Sacha|Oui|
+95|Vetements|Veste|Femme|299.00|Picture|Lander Purple|S-M-L|Sacha|Oui|
+96|Vetements|Veste|Femme|289.00|Picture|Mineral Petro Blue|S-M-L|Sacha|Oui|
+97|Vetements|Veste|Femme|278.65|Icepeak|Kendra 455|S-M-L|Vincent|Non|
+98|Vetements|Veste|Femme|299.00|Picture|Exa Purple|S-M-L|Sacha|Oui|
+99|Vetements|Veste|Femme|305.95|Roxy|Flicker Bright|S-M-L|Sacha|Oui|
+100|Vetements|Veste|Femme|340.25|Roxy|Snowyvale Bright|S-M-L|Sacha|Oui|
+
+
