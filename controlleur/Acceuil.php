@@ -19,7 +19,8 @@
 
 
   $tailles = $dao->getTaille();
-  var_dump($tailles);
+  $cover = '../modele/data/Images/';
+  //var_dump($tailles);
  ?>
 
 
@@ -80,6 +81,7 @@
 
             <fieldset>
               <legend>Filtre</legend>
+              <label>Marque</label><br>
                   <?php
                   $selected = '';
                   echo '<select name="marque">',"\n";
@@ -91,7 +93,8 @@
                   }
                   echo '</select>',"\n";
                   ?>
-                  <p>
+                  <br>
+                  <label>Taille</label><br>
                   <?php
                   $selected = '';
                   echo '<select name="taille">',"\n";
@@ -102,7 +105,7 @@
                         $selected='';
                   }
                   echo '</select>',"\n";
-                  ?></p>
+                  ?>
 
 
 
@@ -114,7 +117,9 @@
         <div class="colonne-centre">
           <?php foreach ($centre as $a) : ?>
             <div class="Produit">
-              <img <?= $a->cover ?>  alt=<?=$a->reference?>>
+              <a href="ProduitDetailctrl.php">
+              <img <?= '../modele/data/Images/'.$a->cover ?>  alt=<?=$a->reference?>>
+              </a>
                 <div class="Info-Produit">
                   <p> <?=$a->reference ?>  </p> &nbsp;
                   <p>  <?=$a->prix?> €<p>
@@ -134,13 +139,13 @@
               Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
             </div>
+
       </div>
 
     <div id="ft">
       <div id="footer"> FOOTER</div>
     </div>
-  </div>
-
+</div>
 </body>
 
 </html>

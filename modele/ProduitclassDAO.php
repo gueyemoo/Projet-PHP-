@@ -43,6 +43,7 @@ function read(int $id) : Produit{
     return $retour;
   }
 
+
   function getTaille():array{
     $requ="SELECT DISTINCT taille FROM Produit WHERE taille >= 132 AND taille <= 190 ORDER BY taille";
     $res = $this->db->query($requ);
