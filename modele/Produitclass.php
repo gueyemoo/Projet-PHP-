@@ -13,15 +13,15 @@ class Produit
   public $disponibilite;
   public $cover;
 
-  function __construct(int $id=0, string $categorie="", string $genre="", float $prix=NULL, string $marque="",
-string $reference="", string $taille="", string $vendeur="", string $disponibilite="", string $cover){
+  function __construct(int $id=0, string $categorie="", string $type="",string $genre="", float $prix=NULL, string $marque="",
+string $reference="", string $taille="", string $vendeur="", string $disponibilite="", string $cover=""){
     $this->id = $id;
     $this->categorie=$categorie;
     $this->type=$type;
     $this->genre=$genre;
     $this->prix=$prix;
     $this->marque=$marque;
-    $this->reference=$refence;
+    $this->reference=$reference;
     $this->taille=$taille;
     $this->vendeur=$vendeur;
     $this->disponibilite=$disponibilite;
