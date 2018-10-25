@@ -1,0 +1,27 @@
+<div class="recherche_p">
+
+          <?php
+            require_once('modele/data/ProduitclassDAO.php');
+            $bdd = new ProduitDAO();
+            $produits = $bdd->query('SELECT reference FROM Produit ORDER BY id DESC');
+            if(isset($_GET['q']) AND !empty($_GET['q'])) {
+              $q = htmlspecialchars($_GET['q']);
+              $articles = $bdd->query('SELECT reference FROM Produit WHERE reference LIKE "%'.$q.'%" ORDER BY id DESC');
+            }
+            ?>
+            <form method="GET">
+            <input type="search" name="q" placeholder="Recherche..." />
+            <input type="submit" value="Valider" />
+          </form>
+          <?php if($produits->rowCount() > 0) { ?>
+            <ul>
+              <?php while($a = $produits->fetch()) { ?>
+                <li><?= $a['reference'] ?></li>
+              <?php } ?>
+            </ul>
+          <?php } else { ?>
+            Aucun résultat pour: <?= $q ?>...
+          <?php } ?>
+            <a href="#"><img src="rechercher38.png" alt= "rechercher"></a>
+           </form>
+       </div>
