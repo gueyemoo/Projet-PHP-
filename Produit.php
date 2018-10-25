@@ -3,7 +3,7 @@
 <head>
 <title>VMS SKI - Produit</title>
 <meta http-equiv="content-type" content="text/html; charset =iso-8859-1">
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="view/style.css">
 <style>
       @font-face { font-family: Vogue; src: url('Vogue.ttf'); }
       @font-face { font-family: Office; src: url('Office.otf'); }

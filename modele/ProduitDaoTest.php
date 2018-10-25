@@ -6,8 +6,8 @@ require_once('ProduitclassDAO.php');
 $config = parse_ini_file('../config/config.ini');
 
 // Creation de l'instace DAO
-$LesProduits = new ProduitDAO($config['database_path']);
+$DAO = new ProduitDAO($config['database_path']);
 
-$m = $LesProduits->get(1);
+$m = $DAO->get(1);
 var_dump($m);
 ?>

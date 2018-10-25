@@ -16,7 +16,7 @@
   }
 
   $marques = $dao->getMarques();
-  var_dump($marques);
+ var_dump($marques);
 
  ?>
 
@@ -28,7 +28,7 @@
 <head>
 <title>VMS SKI - Acceuil</title>
 <meta http-equiv="content-type" content="text/html; charset =iso-8859-1">
-<link rel="stylesheet" type="text/css" href="../style.css">
+<link rel="stylesheet" type="text/css" href="../view/style.css">
 <style>
       @font-face { font-family: Vogue; src: url('Vogue.ttf'); }
       @font-face { font-family: Office; src: url('Office.otf'); }
@@ -82,7 +82,7 @@
               <?php foreach ($marques as $m => $value): ?>
                 <div>
                   <input type="checkbox" id=<?= $value[0] ?> name=<?= $value[0] ?> value=<?= $value[0] ?>/>
-                  <label <?= $value[0] ?> />
+                  <label for=""> <?=$value[0]?> </label>
                 </div>
               <?php endforeach; ?>
             </fieldset>

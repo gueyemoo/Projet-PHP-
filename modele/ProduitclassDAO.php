@@ -32,7 +32,7 @@ function read(int $id) : Produit{
   }
 
   function getMarques():array{
-    $requ="SELECT DISTINCT marque FROM Produit";
+    $requ="SELECT DISTINCT marque FROM Produit ORDER BY marque";
     $res = $this->db->query($requ);
     $result = $res->fetchAll();
     return $result;
@@ -46,6 +46,7 @@ function read(int $id) : Produit{
   }
 
 }
-//$LesProduits = new ProduitDAO(); doit être fait dans le constructeur
+$config = parse_ini_file('../config/config.ini');
+$DAO= new ProduitDAO($config['database_path']);
 
 ?>

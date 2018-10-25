@@ -60,28 +60,29 @@
 
 
       <div class="imgProduit">
-        <?php if (isset($_GET['id'])): ?>
           <img src="<?=$route?>" alt="Pas d'image trouvé" style="height:400px; weight: 400px; margin-top: 70px; margin-left:5px;">
-
-        <?php else: ?>
-
-          print"Il manque le lien vers la cover.";
-          exit(1);
-        <?php endif; ?>
       </div>
+      <!-- public 'id' => string '1' (length=1)
+  public 'categorie' => string 'ski' (length=3)
+  public 'type' => string 'Materiel' (length=8)
+  public 'genre' => string 'Homme' (length=5)
+  public 'prix' => string '245.5' (length=5)
+  public 'marque' => string 'Rossignol' (length=9)
+  public 'reference' => string 'Experience 80 Premium' (length=21)
+  public 'taille' => string '176' (length=3)
+  public 'vendeur' => string 'Sacha' (length=5)
+  public 'disponibilite' => string 'Oui' (length=3)
+  public 'cover' => string '1.jpg' (length=5) -->
 
       <div class="lesInfos" style="margin-top: 50px;">
-        <?php  ?>
-        <p>Titre: SKI NIPLA </p>
-        <p> Reference: 1</p>
-        <p>Categorie: SKI</p>
-        <p>Marque: Lacoste</p>
-        <p>Descriptif: Protection en caoutchou et en peau de crocodile genre lacoste</p>
-        <p>Disponibilite: oui </p>
-        <p>Taille: Taille 176 </p>
-        <p>Vendeur: Mohamed</p>
-        <p>Point de vente: 75 rue de Paris CHARENTON LE PONT 94220 </p>
-        <p>Prix: 1500 $ </p>
+
+        <h2> <?=$Produit->reference?></h2>
+        <p>Categorie: <?=$Produit->categorie  ?></p>
+        <p>Marque: <?=$Produit->marque  ?></p>
+        <p>Disponibilite: <?=$Produit->disponibilite  ?> </p>
+        <p>Taille: <?=$Produit->taille  ?> cm </p>
+        <p>Vendeur:<?=$Produit->vendeur  ?></p>
+        <p>Prix: <?=$Produit->prix  ?> </p>
       </div>
     </div>
     </div>
