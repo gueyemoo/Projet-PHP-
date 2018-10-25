@@ -1,6 +1,6 @@
 <?php
 $config = parse_ini_file('../config/config.ini');
-var_dump($config);
+//var_dump($config);
 require_once('Produitclass.php');
 class ProduitDAO
 {
@@ -31,10 +31,10 @@ function read(int $id) : Produit{
     return $result[0];
   }
 
-  function getMarques():Produit{
+  function getMarques():array{
     $requ="SELECT DISTINCT marque FROM Produit";
     $res = $this->db->query($requ);
-    $result = $res->fetch();
+    $result = $res->fetchAll();
     return $result;
   }
 

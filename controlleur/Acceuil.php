@@ -1,5 +1,5 @@
 <?php
-  require_once('../modele/data/ProduitclassDAO.php');
+  require_once('../modele/ProduitclassDAO.php');
 
   $dao = new ProduitDAO();
 
@@ -11,11 +11,12 @@
 
   foreach ($promos as $id) {
 
-    $a = $dao->read($id);
+    $a = $dao->get($id);
     $centre[] = $a;
   }
 
-  $marques = $dao.getMarques();
+  $marques = $dao->getMarques();
+  var_dump($marques);
 
  ?>
 
@@ -78,9 +79,10 @@
         <div class="colonne-gauche">
             <fieldset>
               <legend>Marques</legend>
-              <?php foreach ($marques as $m): ?>
+              <?php foreach ($marques as $m => $value): ?>
                 <div>
-                  <input type="checkbox" id=<?= $m ?> value=<?= $m ?>/>
+                  <input type="checkbox" id=<?= $value[0] ?> name=<?= $value[0] ?> value=<?= $value[0] ?>/>
+                  <label <?= $value[0] ?> />
                 </div>
               <?php endforeach; ?>
             </fieldset>
@@ -91,11 +93,12 @@
             <div class="Produit">
               <img <?= $a->cover ?>  alt=<?=$a->reference?>>
                 <div class="Info-Produit">
-                  <p> <?=$a->type ?> <?=$a->taille?> </p> &nbsp;
-                  <p>  <?=$a->prix?> <p>
+                  <p> <?=$a->reference ?>  </p> &nbsp;
+                  <p>  <?=$a->prix?> €<p>
                 </div>
             <?php endforeach; ?>
             </div>
+          </div>
 
 
 
