@@ -64,6 +64,7 @@
       </div>
 
       <div class="lesInfos" style="margin-top: 50px;">
+        <?php  ?>
         <p>Titre: SKI NIPLA </p>
         <p> Reference: 1</p>
         <p>Categorie: SKI</p>
