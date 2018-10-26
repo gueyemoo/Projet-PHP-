@@ -16,8 +16,11 @@
   }
 
   $marques = $dao->getMarques();
- var_dump($marques);
 
+
+  $tailles = $dao->getTaille();
+  $cover = '../modele/data/Images/';
+  //var_dump($tailles);
  ?>
 
 
@@ -47,12 +50,9 @@
         <img src="vms50.png" alt="logo"/>
       </h1>
 
+          <div class="recherche_p">
 
-        <div class="recherche_p">
 
-          <form action="/search" id="searchthis" method="get">
-            <input id="search" name="q" type="text" placeholder="Que souhaitez vous rechercher ?" />
-            <!-- <input id="search-btn" type="submit" value="Rechercher" /> -->
             <a href="#"><img src="rechercher38.png" alt= "rechercher"></a>
            </form>
        </div>
@@ -77,21 +77,49 @@
 
       <div id="body">
         <div class="colonne-gauche">
+          <form class="" action="Acceuil.php" method="get">
+
             <fieldset>
-              <legend>Marques</legend>
-              <?php foreach ($marques as $m => $value): ?>
-                <div>
-                  <input type="checkbox" id=<?= $value[0] ?> name=<?= $value[0] ?> value=<?= $value[0] ?>/>
-                  <label for=""> <?=$value[0]?> </label>
-                </div>
-              <?php endforeach; ?>
+              <legend>Filtre</legend>
+              <label>Marque</label><br>
+                  <?php
+                  $selected = '';
+                  echo '<select name="marque">',"\n";
+                  echo '<option selected="selected"> </option>';
+                  foreach ($marques as $m => $value)
+                  {
+                        echo "\t".'<option value="'.$value .'"'. $selected .'>'. $value .'</option>'."\n";
+                        $selected='';
+                  }
+                  echo '</select>',"\n";
+                  ?>
+                  <br>
+                  <label>Taille</label><br>
+                  <?php
+                  $selected = '';
+                  echo '<select name="taille">',"\n";
+                  echo '<option selected="selected"> </option>';
+                  foreach ($tailles as $t => $taille)
+                  {
+                        echo "\t".'<option value="'.$taille .'"'. $selected .'>'. $taille .'</option>'."\n";
+                        $selected='';
+                  }
+                  echo '</select>',"\n";
+                  ?>
+
+
+
+                  <p><input type="submit" value="Valider"></p>
             </fieldset>
+            </form>
           </div>
 
         <div class="colonne-centre">
           <?php foreach ($centre as $a) : ?>
             <div class="Produit">
-              <img <?= $a->cover ?>  alt=<?=$a->reference?>>
+              <a href="ProduitDetailctrl.php">
+              <img <?= '../modele/data/Images/'.$a->cover ?>  alt=<?=$a->reference?>>
+              </a>
                 <div class="Info-Produit">
                   <p> <?=$a->reference ?>  </p> &nbsp;
                   <p>  <?=$a->prix?> €<p>
@@ -111,13 +139,13 @@
               Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
             </div>
+
       </div>
 
     <div id="ft">
       <div id="footer"> FOOTER</div>
     </div>
-  </div>
-
+</div>
 </body>
 
 </html>
