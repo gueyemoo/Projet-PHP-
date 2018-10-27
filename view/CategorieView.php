@@ -97,17 +97,15 @@
                 </div>
             <?php endforeach; ?>
           </div>
-          <?php switch ($id) { case 1 : ?>
-            <center> <a href="Acceuil.php?id=<?=$id+10?> " > <label> Page suivante > </label> </a>
-          <?php break; case 10 : ?>
-            <center> <a href="Acceuil.php?id=<?=$id-9?>" > <label> < Page précédente  </label> </a>
-                     <a href="Acceuil.php?id=<?=$id+10?>"> <label> Page suivante > </label> </a> </center>
-          <?php break; case 91 : ?>
-            <center> <a href="Acceuil.php?id=<?=$id-10?>" > <label> < Page précédente  </label> </a>
-          <?php break; default : ?>
-          <center> <a href="Acceuil.php?id=<?=$id-10?>" > <label> < Page précédente  </label> </a>
-                   <a href="Acceuil.php?id=<?=$id+10?>"> <label> Page suivante > </label> </a> </center>
-          <?php break;} ?>
+          <?php if (!array_key_exists($id-10,$categorie) && !array_key_exists($id+10,$categorie)){ ?>
+          <?php } elseif (!array_key_exists($id-10,$categorie)) {?>
+            <center> <a href="Categorie.php?id=<?=$id+10?>&cat=<?=$categorie[0]->categorie?>" > <label> Page suivante > </label> </a>
+          <?php } elseif (!array_key_exists($id+10,$categorie)) { ?>
+            <center> <a href="Categorie.php?id=<?=$id-10?>&cat=<?=$categorie[0]->categorie?>" > <label> < Page précédente  </label> </a>
+          <?php } else { ?>
+          <center> <a href="Categorie.php?id=<?=$id-10?>&cat=<?=$categorie[0]->categorie?>" > <label> < Page précédente  </label> </a>
+                   <a href="Categorie.php?id=<?=$id+10?>&cat=<?=$categorie[0]->categorie?>"> <label> Page suivante > </label> </a> </center>
+          <?php } ?>
 
 
         </div>

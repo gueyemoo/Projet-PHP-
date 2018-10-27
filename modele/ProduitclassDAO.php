@@ -45,8 +45,41 @@ function read(int $id) : Produit{
     return $result[0];
   }
 
+  function getCategorie(string $cat):array{
+    $requ="SELECT * FROM Produit WHERE categorie = '$cat'";
+    $res = $this->db->query($requ);
+    $result = $res->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, "Produit");
+    return $result;
+  }
+
+  function getListeObjetPartielle(int $id):array
+  {
+    if($id == 1 )
+    {
+      $requ="SELECT * FROM Produit WHERE id < 20";
+      $res = $this->db->query($requ);
+      $result = $res->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, "Produit");
+      return $result;
+    }
+    elseif ($id == 91)
+    {
+      $requ="SELECT * FROM Produit WHERE id < 100 and id >80";
+      $res = $this->db->query($requ);
+      $result = $res->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, "Produit");
+      return $result;
+    }
+    else
+    {
+      $requ="SELECT * FROM Produit WHERE id < $id+10 and id > $id-10";
+      $res = $this->db->query($requ);
+      $result = $res->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, "Produit");
+      return $result;
+    }
+  }
+  
 }
 $config = parse_ini_file('../config/config.ini');
 $DAO= new ProduitDAO($config['database_path']);
+
 
 ?>
