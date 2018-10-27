@@ -18,7 +18,7 @@
   $marques = $dao->getMarques();
 
 
-  $tailles = $dao->getTaille();
+  // $tailles = $dao->getTaille();
   $cover = '../modele/data/Images/';
   //var_dump($tailles);
  ?>
