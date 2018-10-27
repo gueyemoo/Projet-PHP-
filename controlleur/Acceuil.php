@@ -117,8 +117,8 @@
         <div class="colonne-centre">
           <?php foreach ($centre as $a) : ?>
             <div class="Produit">
-              <a href="ProduitDetailctrl.php">
-              <img <?= '../modele/data/Images/'.$a->cover ?>  alt=<?=$a->reference?>>
+              <a href="ProduitDetailctrl.php?id=<?=$a->id?>">
+              <img <?= '../modele/data/Images/'.$a->cover ?>  alt=<?=$a->reference?> style="height:200px; weight: 200px;">
               </a>
                 <div class="Info-Produit">
                   <p> <?=$a->reference ?>  </p> &nbsp;
