@@ -4,7 +4,7 @@
   $dao = new ProduitDAO();
 
   $promos = array(
-    '1','2','3','4'
+    '1','2','3','4','5','6','7','8','9','10'
   );
 
   $centre = array();
@@ -90,6 +90,8 @@
                   {
                         echo "\t".'<option value="'.$value .'"'. $selected .'>'. $value .'</option>'."\n";
                         $selected='';
+                        var_dump($marques);
+
                   }
                   echo '</select>',"\n";
                   ?>
@@ -115,18 +117,20 @@
           </div>
 
         <div class="colonne-centre">
+          <div class="TheProduit">
+
           <?php foreach ($centre as $a) : ?>
             <div class="Produit">
               <a href="ProduitDetailctrl.php?id=<?=$a->id?>">
-              <img <?= '../modele/data/Images/'.$a->cover ?>  alt=<?=$a->reference?> style="height:200px; weight: 200px;">
+              <img src="<?='../modele/data/Images/'.$a->cover; ?>"  alt=<?=$a->reference?> style="height:185px; weight:185px;">
               </a>
-                <div class="Info-Produit">
-                  <p> <?=$a->reference ?>  </p> &nbsp;
-                  <p>  <?=$a->prix?> €<p>
+
+                  <h4 style="width:150px; height: 25px;"><?=$a->reference ?></h4>&nbsp;
                 </div>
             <?php endforeach; ?>
-            </div>
           </div>
+        </div>
+
 
 
 

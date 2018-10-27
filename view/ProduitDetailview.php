@@ -62,17 +62,6 @@
       <div class="imgProduit">
           <img src="<?=$route?>" alt="Pas d'image trouvé" style="height:400px; weight: 400px; margin-top: 70px; margin-left:5px;">
       </div>
-      <!-- public 'id' => string '1' (length=1)
-  public 'categorie' => string 'ski' (length=3)
-  public 'type' => string 'Materiel' (length=8)
-  public 'genre' => string 'Homme' (length=5)
-  public 'prix' => string '245.5' (length=5)
-  public 'marque' => string 'Rossignol' (length=9)
-  public 'reference' => string 'Experience 80 Premium' (length=21)
-  public 'taille' => string '176' (length=3)
-  public 'vendeur' => string 'Sacha' (length=5)
-  public 'disponibilite' => string 'Oui' (length=3)
-  public 'cover' => string '1.jpg' (length=5) -->
 
       <div class="lesInfos" style="margin-top: 50px;">
 
