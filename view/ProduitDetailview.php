@@ -35,13 +35,11 @@
     <div id="BarreNav">
       <ul id="nav">
          <li id="nav-home"><a href="Acceuil.php">Accueil</a></li>
-         <li id="nav-ski"><a href="#">Ski</a></li>
-         <li id="nav-snow"><a href="#">Snowboard</a></li>
-         <li id="nav-acc"><a href="#">Accessoires</a></li>
-         <li id="nav-vet"><a href="#">Vetements</a></li>
-         <li id="nav-about"><a href="#">A propos</a></li>
-         <li id="nav-about"><a href="Produit.php">Test </a></li>
-
+         <li id="nav-ski"><a href="Categorie.php?cat=ski">Ski</a></li>
+         <li id="nav-snow"><a href="Categorie.php?cat=Snowboard">Snowboard</a></li>
+         <li id="nav-acc"><a href="Categorie.php?cat=Accessoires">Accessoires</a></li>
+         <li id="nav-vet"><a href="Categorie.php?cat=Vetements">Vetements</a></li>
+         <li id="nav-about"><a href="#">À propos</a></li>
       </ul>
 
     </div>
@@ -73,7 +71,7 @@
         <p>Disponibilite: <?=$Produit->disponibilite  ?> </p>
         <p>Taille: <?=$Produit->taille  ?> cm </p>
         <p>Vendeur:<?=$Produit->vendeur  ?></p>
-        <p>Prix: <?=$Produit->prix  ?> </p>
+        <p>Prix: <?=$Produit->prix  ?> €</p>
       </div>
     </div>
     </div>

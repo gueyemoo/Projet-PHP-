@@ -85,8 +85,6 @@
           </div>
 
         <div class="colonne-centre">
-          <div class="TheProduit">
-
           <?php foreach ($centre as $a) : ?>
             <div class="Produit">
               <a href="ProduitDetailctrl.php?id=<?=$a->id?>">
@@ -96,7 +94,6 @@
                   <h4 style="width:150px; height: 25px;"><?=$a->reference ?></h4>&nbsp;
                 </div>
             <?php endforeach; ?>
-          </div>
           <?php if (!array_key_exists($id-10,$categorie) && !array_key_exists($id+10,$categorie)){ ?>
           <?php } elseif (!array_key_exists($id-10,$categorie)) {?>
             <center> <a href="Categorie.php?id=<?=$id+10?>&cat=<?=$categorie[0]->categorie?>" > <label> Page suivante > </label> </a>
@@ -106,8 +103,6 @@
           <center> <a href="Categorie.php?id=<?=$id-10?>&cat=<?=$categorie[0]->categorie?>" > <label> < Page précédente  </label> </a>
                    <a href="Categorie.php?id=<?=$id+10?>&cat=<?=$categorie[0]->categorie?>"> <label> Page suivante > </label> </a> </center>
           <?php } ?>
-
-
         </div>
 
 
