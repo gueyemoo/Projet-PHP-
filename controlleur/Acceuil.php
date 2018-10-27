@@ -47,13 +47,16 @@
 
     <div id="hd">
       <div id="header"><h1> VMS SKI
-        <img src="vms50.png" alt="logo"/>
+        <img src="../vms50.png" alt="logo"/>
       </h1>
 
-          <div class="recherche_p">
 
+        <div class="recherche_p">
 
-            <a href="#"><img src="rechercher38.png" alt= "rechercher"></a>
+          <form action="/search" id="searchthis" method="get">
+            <input id="search" name="q" type="text" placeholder="Que souhaitez vous rechercher ?" />
+            <!-- <input id="search-btn" type="submit" value="Rechercher" /> -->
+            <a href="#"><img src="../rechercher38.png" alt= "rechercher"></a>
            </form>
        </div>
 

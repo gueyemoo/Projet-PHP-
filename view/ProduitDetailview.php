@@ -17,7 +17,7 @@
 <body>
   <div id="hd">
     <div id="header"><h1> VMS SKI
-      <img src="vms50.png" alt="logo"/>
+      <img src="../vms50.png" alt="logo"/>
     </h1>
 
 
@@ -26,25 +26,27 @@
         <form action="/search" id="searchthis" method="get">
           <input id="search" name="q" type="text" placeholder="Que souhaitez vous rechercher ?" />
           <!-- <input id="search-btn" type="submit" value="Rechercher" /> -->
-          <a href="#"><img src="rechercher38.png" alt= "rechercher"></a>
+          <a href="#"><img src="../rechercher38.png" alt= "rechercher"></a>
          </form>
      </div>
 
     </div>
 
-  <div id="BarreNav">
-    <ul id="nav">
-       <li id="nav-home"><a href="Acceuil.php">Accueil</a></li>
-       <li id="nav-ski"><a href="#">Ski</a></li>
-       <li id="nav-snow"><a href="#">Snowboard</a></li>
-       <li id="nav-acc"><a href="#">Accessoires</a></li>
-       <li id="nav-vet"><a href="#">Vetements</a></li>
-       <li id="nav-about"><a href="#">A propos</a></li>
-       <li id="nav-about"><a href="Produit.php">Test </a></li>
-    </ul>
+    <div id="BarreNav">
+      <ul id="nav">
+         <li id="nav-home"><a href="Acceuil.php">Accueil</a></li>
+         <li id="nav-ski"><a href="#">Ski</a></li>
+         <li id="nav-snow"><a href="#">Snowboard</a></li>
+         <li id="nav-acc"><a href="#">Accessoires</a></li>
+         <li id="nav-vet"><a href="#">Vetements</a></li>
+         <li id="nav-about"><a href="#">A propos</a></li>
+         <li id="nav-about"><a href="Produit.php">Test </a></li>
 
-   </div>
-  </div>
+      </ul>
+
+    </div>
+
+    </div>
   <div id="body">
     <div class="colonne-gauche">
 <h2>Promotion</h2>
@@ -63,9 +65,9 @@
           <img src="<?=$route?>" alt="Pas d'image trouvé" style="height:400px; weight: 400px; margin-top: 70px; margin-left:5px;">
       </div>
 
-      <div class="lesInfos" style="margin-top: 50px;">
+      <div class="lesInfos" >
 
-        <h2> <?=$Produit->reference?></h2>
+        <h1 style="color: gray;"> <?=$Produit->reference?></h1>
         <p>Categorie: <?=$Produit->categorie  ?></p>
         <p>Marque: <?=$Produit->marque  ?></p>
         <p>Disponibilite: <?=$Produit->disponibilite  ?> </p>
