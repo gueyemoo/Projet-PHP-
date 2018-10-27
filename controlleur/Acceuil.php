@@ -2,18 +2,19 @@
   require_once('../modele/ProduitclassDAO.php');
 
   $dao = new ProduitDAO();
-
-  $promos = array(
-    '1','2','3','4','5','6','7','8','9','10'
-  );
-
   $centre = array();
+  $id = 1;
 
-  foreach ($promos as $id) {
-
-    $a = $dao->get($id);
-    $centre[] = $a;
+  if(isset($_GET['id']) ) {
+    $id = $_GET['id'];
   }
+
+
+for ($i=$id; $i <$id+10 ; $i++) {
+  $a = $dao->get($i);
+  $centre[] = $a;
+}
+
 
   $marques = $dao->getMarques();
 
@@ -29,7 +30,7 @@
 <html>
 
 <head>
-<title>VMS SKI - Acceuil</title>
+<title>VMS SKI</title>
 <meta http-equiv="content-type" content="text/html; charset =iso-8859-1">
 <link rel="stylesheet" type="text/css" href="../view/style.css">
 <style>
@@ -132,7 +133,22 @@
                 </div>
             <?php endforeach; ?>
           </div>
+          <?php switch ($id) { case 1 : ?>
+            <center> <a href="Acceuil.php?id=<?=$id+10?>" > <label> Page suivante > </label> </a>
+          <?php break; case 10 : ?>
+            <center> <a href="Acceuil.php?id=<?=$id-9?>" > <label> < Page précédente  </label> </a>
+                     <a href="Acceuil.php?id=<?=$id+10?>"> <label> Page suivante > </label> </a> </center>
+          <?php break; case 91 : ?>
+            <center> <a href="Acceuil.php?id=<?=$id-10?>" > <label> < Page précédente  </label> </a>
+          <?php break; default : ?>
+          <center> <a href="Acceuil.php?id=<?=$id-10?>" > <label> < Page précédente  </label> </a>
+                   <a href="Acceuil.php?id=<?=$id+10?>"> <label> Page suivante > </label> </a> </center>
+          <?php break;} ?>
+
+
         </div>
+
+
 
 
 
