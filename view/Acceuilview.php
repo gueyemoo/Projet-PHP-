@@ -77,8 +77,6 @@
                   echo '</select>',"\n";
                   ?>
 
-
-
                   <p><input type="submit" value="Valider"></p>
             </fieldset>
             </form>
@@ -95,7 +93,6 @@
                   <h4 style="width:150px; height: 25px;"><?=$a->reference ?></h4>&nbsp;
                 </div>
             <?php endforeach; ?>
-          </div>
           <?php switch ($id) { case 1 : ?>
             <center> <a href="Acceuil.php?id=<?=$id+10?> " > <label> Page suivante > </label> </a>
           <?php break; case 10 : ?>
@@ -107,12 +104,7 @@
           <center> <a href="Acceuil.php?id=<?=$id-10?>" > <label> < Page précédente  </label> </a>
                    <a href="Acceuil.php?id=<?=$id+10?>"> <label> Page suivante > </label> </a> </center>
           <?php break;} ?>
-
-
         </div>
-
-
-
 
 
 
@@ -123,6 +115,7 @@
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
               Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
 
             </div>
 
