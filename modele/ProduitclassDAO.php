@@ -36,7 +36,23 @@ function read(int $id) : Produit{
     $res = $this->db->query($requ);
     $result = $res->fetchAll();
     return $result;
+    $retour = array();
+    foreach ($result as $key => $value) {
+      $retour[]=$value['marque'];
+    }
+    return $retour;
   }
+  function getTaille():array{
+    $requ="SELECT DISTINCT taille FROM Produit WHERE taille >= 132 AND taille <= 190 ORDER BY taille";
+    $res = $this->db->query($requ);
+    $result = $res->fetchAll();
+    $retour = array();
+    foreach ($result as $key => $value) {
+      $retour[]=$value['taille'];
+    }
+    return $retour;
+  }
+
 
   function nb():int{
     $requ="SELECT count(*) FROM Produit";
@@ -76,7 +92,7 @@ function read(int $id) : Produit{
       return $result;
     }
   }
-  
+
 }
 $config = parse_ini_file('../config/config.ini');
 $DAO= new ProduitDAO($config['database_path']);

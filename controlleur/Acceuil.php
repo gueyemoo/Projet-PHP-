@@ -9,7 +9,7 @@
   if(isset($_GET['id']) ) {
     $id = $_GET['id'];
   }
-  
+
 
   for ($i=$id; $i <$id+10 ; $i++) {
   $a = $dao->get($i);
@@ -18,6 +18,8 @@
 
 
   $marques = $dao->getMarques();
+
+  $tailles = $dao->getTaille();
 
 
   // $tailles = $dao->getTaille();

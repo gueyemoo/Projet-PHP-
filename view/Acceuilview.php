@@ -43,6 +43,8 @@
          <li id="nav-acc"><a href="Categorie.php?cat=Accessoires">Accessoires</a></li>
          <li id="nav-vet"><a href="Categorie.php?cat=Vetements">Vetements</a></li>
          <li id="nav-about"><a href="#">À propos</a></li>
+         <li id="nav-about"><a href="Produit.php">Test </a></li>
+
       </ul>
 
     </div>
@@ -83,6 +85,7 @@
           </div>
 
         <div class="colonne-centre">
+
           <?php foreach ($centre as $a) : ?>
             <div class="Produit">
               <a href="ProduitDetailctrl.php?id=<?=$a->id?>">
@@ -92,6 +95,7 @@
                   <h4 style="width:150px; height: 25px;"><?=$a->reference ?></h4>&nbsp;
                 </div>
             <?php endforeach; ?>
+          </div>
           <?php switch ($id) { case 1 : ?>
             <center> <a href="Acceuil.php?id=<?=$id+10?> " > <label> Page suivante > </label> </a>
           <?php break; case 10 : ?>
