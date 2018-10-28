@@ -68,6 +68,7 @@ function read(int $id) : Produit{
     return $result;
   }
 
+<<<<<<< HEAD
   function getListeObjetPartielle(int $id):array
   {
     if($id == 1 )
@@ -92,6 +93,9 @@ function read(int $id) : Produit{
       return $result;
     }
   }
+=======
+  
+>>>>>>> f893f9f252ac5d62efa5f25cda41d281e5052e52
 
 }
 $config = parse_ini_file('../config/config.ini');
