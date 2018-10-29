@@ -2,6 +2,7 @@
 <html>
 
 <head>
+
 <title>VMS SKI</title>
 <meta http-equiv="content-type" content="text/html; charset =iso-8859-1">
 <link rel="stylesheet" type="text/css" href="../view/style.css">
@@ -58,25 +59,28 @@
             <fieldset>
               <legend>Filtre</legend>
               <label>Marque</label><br>
-              <select>
-                <?php foreach ($marques as $m => $value):?>
-                    <option> <?= $value[0]?>
+              <select name = "marque">
+                <option value="0" selected>Toutes les marques</option>
+                <?php foreach ($marques as $m):?>
+                    <option value="<?=$m?>"><?= $m ?></option>
+
                 <?php endforeach; ?>
               </select>
                   <br>
-                  <label>Taille</label><br>
                   <?php
-                  $selected = '';
-                  echo '<select name="taille">',"\n";
-                  echo '<option selected="selected"> </option>';
-                  foreach ($tailles as $t => $taille)
+                  echo '<select name="prix">',"\n";
+                  echo '<option value = "100000000" selected="selected"> tous les prix</option>';
+                  foreach ($listePrix as $affiche => $prix)
                   {
-                        echo "\t".'<option value="'.$taille .'"'. $selected .'>'. $taille .'</option>'."\n";
-                        $selected='';
+
+                        echo "\t".'<option value="'.$prix .'"'.'>'. $affiche .'</option>'."\n";
                   }
                   echo '</select>',"\n";
                   ?>
+                  <br>
 
+                  <label for="dispo">Disponible</label>
+                  <input type="checkbox" name="dispo" value="Oui" id=dispo>
                   <p><input type="submit" value="Valider"></p>
             </fieldset>
             </form>

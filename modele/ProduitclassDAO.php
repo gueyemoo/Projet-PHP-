@@ -35,7 +35,6 @@ function read(int $id) : Produit{
     $requ="SELECT DISTINCT marque FROM Produit ORDER BY marque";
     $res = $this->db->query($requ);
     $result = $res->fetchAll();
-    return $result;
     $retour = array();
     foreach ($result as $key => $value) {
       $retour[]=$value['marque'];
@@ -67,6 +66,39 @@ function read(int $id) : Produit{
     $result = $res->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, "Produit");
     return $result;
   }
+
+  function getArticleFiltre(int $nbArticle , float $prix, string $marque, string $dispo){
+    if(!isset($prix)){
+      $prix=1000000000;
+    }
+
+    if(!$marque){
+      $requeteMarque=" ";
+    }else {
+      $requeteMarque=" and marque = '$marque' ";
+    }
+
+    if($dispo==''){
+      $dispo = "'Oui' or 'Non'";
+      $requeteDispo='';
+    }else{
+      $requeteDispo= "and disponibilite ='$dispo' ";
+
+    }
+    $requetePrix= " and prix<=$prix ";
+
+
+
+    $requ="SELECT * FROM Produit WHERE 1 ".$requeteMarque.$requeteDispo.$requetePrix;
+
+    var_dump($requ); // pour voir la requete effectuer par les filtres 
+    $res = $this->db->query($requ);
+    $result = $res->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, "Produit");
+    return $result;
+
+
+  }
+
 
   function getListeObjetPartielle(int $id):array
   {
