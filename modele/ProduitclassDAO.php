@@ -41,13 +41,14 @@ function read(int $id) : Produit{
     }
     return $retour;
   }
-  function getTaille():array{
-    $requ="SELECT DISTINCT taille FROM Produit WHERE taille >= 132 AND taille <= 190 ORDER BY taille";
+
+  function getVendeur():array{
+    $requ="SELECT DISTINCT vendeur FROM Produit ORDER BY vendeur";
     $res = $this->db->query($requ);
     $result = $res->fetchAll();
     $retour = array();
     foreach ($result as $key => $value) {
-      $retour[]=$value['taille'];
+      $retour[]=$value['vendeur'];
     }
     return $retour;
   }
@@ -67,7 +68,7 @@ function read(int $id) : Produit{
     return $result;
   }
 
-  function getArticleFiltre(int $nbArticle , float $prix, string $marque, string $dispo){
+  function getArticleFiltre(int $nbArticle , float $prix, string $marque, string $dispo, string $vendeur){
     if(!isset($prix)){
       $prix=1000000000;
     }
@@ -85,13 +86,20 @@ function read(int $id) : Produit{
       $requeteDispo= "and disponibilite ='$dispo' ";
 
     }
+
     $requetePrix= " and prix<=$prix ";
 
+    if(!$vendeur){
+      $requeteVendeur=" ";
+    }else {
+      $requeteVendeur=" and vendeur = '$vendeur' ";
+    }
 
 
-    $requ="SELECT * FROM Produit WHERE 1 ".$requeteMarque.$requeteDispo.$requetePrix;
 
-    var_dump($requ); // pour voir la requete effectuer par les filtres 
+    $requ="SELECT * FROM Produit WHERE 1 ".$requeteMarque.$requeteDispo.$requetePrix.$requeteVendeur;
+
+    //var_dump($requ); // pour voir la requete effectuer par les filtres
     $res = $this->db->query($requ);
     $result = $res->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, "Produit");
     return $result;

@@ -43,9 +43,6 @@
          <li id="nav-snow"><a href="Categorie.php?cat=Snowboard">Snowboard</a></li>
          <li id="nav-acc"><a href="Categorie.php?cat=Accessoires">Accessoires</a></li>
          <li id="nav-vet"><a href="Categorie.php?cat=Vetements">Vetements</a></li>
-         <li id="nav-about"><a href="#">À propos</a></li>
-         <li id="nav-about"><a href="Produit.php">Test </a></li>
-
       </ul>
 
     </div>
@@ -58,7 +55,7 @@
 
             <fieldset>
               <legend>Filtre</legend>
-              <label>Marque</label><br>
+              <label >Marque</label><br>
               <select name = "marque">
                 <option value="0" selected>Toutes les marques</option>
                 <?php foreach ($marques as $m):?>
@@ -66,7 +63,9 @@
 
                 <?php endforeach; ?>
               </select>
+              <br>
                   <br>
+                  <label>Prix</label><br>
                   <?php
                   echo '<select name="prix">',"\n";
                   echo '<option value = "100000000" selected="selected"> tous les prix</option>';
@@ -78,10 +77,19 @@
                   echo '</select>',"\n";
                   ?>
                   <br>
+                  <br>
+                  <label>Vendeur</label><br>
+                  <select name = "vendeur">
+                    <option value="0" selected>Tous les vendeurs</option>
+                    <?php foreach ($vendeur as $v):?>
+                        <option value="<?=$v?>"><?= $v ?></option>
 
+                    <?php endforeach; ?>
+                  </select>
+                  <br><br>
                   <label for="dispo">Disponible</label>
                   <input type="checkbox" name="dispo" value="Oui" id=dispo>
-                  <p><input type="submit" value="Valider"></p>
+                  <p><input type="submit" value="Valider"></p> <br>
             </fieldset>
             </form>
           </div>
@@ -111,14 +119,9 @@
         </div>
 
 
-
         <div class="colonne-droite">
-           <h2>Publicité</h2>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <h3>Publicité</h3>
+            <img src="../pub1.jpg" alt="1er publicité" style="height:600px; width: 150%;">
             </div>
 
             </div>
@@ -126,7 +129,11 @@
       </div>
 
     <div id="ft">
-      <div id="footer"> FOOTER</div>
+      <div id="footer">
+        <img src="../iut.png" alt="logo"/>
+        <h5>© VMS SKI</h5>
+      </div>
+
     </div>
 </div>
 </body>

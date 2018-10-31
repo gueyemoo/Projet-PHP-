@@ -42,9 +42,6 @@
          <li id="nav-snow"><a href="Categorie.php?cat=Snowboard">Snowboard</a></li>
          <li id="nav-acc"><a href="Categorie.php?cat=Accessoires">Accessoires</a></li>
          <li id="nav-vet"><a href="Categorie.php?cat=Vetements">Vetements</a></li>
-         <li id="nav-about"><a href="#">À propos</a></li>
-         <li id="nav-about"><a href="Produit.php">Test </a></li>
-
       </ul>
 
     </div>
@@ -53,35 +50,8 @@
 
       <div id="body">
         <div class="colonne-gauche">
-          <form class="" action="Acceuil.php" method="get">
-
-            <fieldset>
-              <legend>Filtre</legend>
-              <label>Marque</label><br>
-              <select>
-                <?php foreach ($marques as $m => $value):?>
-                    <option> <?= $value[0]?>
-                <?php endforeach; ?>
-              </select>
-                  <br>
-                  <label>Taille</label><br>
-                  <?php
-                  $selected = '';
-                  echo '<select name="taille">',"\n";
-                  echo '<option selected="selected"> </option>';
-                  foreach ($tailles as $t => $taille)
-                  {
-                        echo "\t".'<option value="'.$taille .'"'. $selected .'>'. $taille .'</option>'."\n";
-                        $selected='';
-                  }
-                  echo '</select>',"\n";
-                  ?>
-
-
-
-                  <p><input type="submit" value="Valider"></p>
-            </fieldset>
-            </form>
+          <!-- <h3 style="margin-left:20px;">Publicité</h3> -->
+            <img src="../pub1.jpg" alt="1er publicité" style="height:600px; width: 150%;">
           </div>
 
         <div class="colonne-centre">
@@ -105,27 +75,17 @@
           <?php } ?>
         </div>
 
-
-
-
-
-
         <div class="colonne-droite">
-           <h2>Publicité</h2>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-            </div>
-
+             <img src="../pub2.jpg" alt="2ieme publicité" style="height:600px; width: 150%;">
       </div>
+  </div>
 
-    <div id="ft">
-      <div id="footer"> FOOTER</div>
-    </div>
-</div>
+      <div id="ft">
+        <div id="footer">
+          <img src="../iut.png" alt="logo"/>
+          <h5>© VMS SKI</h5>
+        </div>
+     </div>
 </body>
 
 </html>

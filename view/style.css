@@ -80,7 +80,7 @@ margin-top: 2px;
 
 .colonne-gauche{
   height: 600px;
-  width: 200%;
+  width: 250%;
   background: #cee5ed;
   border-top: #cee5ed 2px solid;
   margin: auto;
@@ -101,7 +101,7 @@ margin-top: 2px;
 
 .colonne-droite{
   height: 600px;
-  width: 200%;
+  width: 150%;
   background: #cee5ed;
   border-top: #cee5ed 2px solid;
   margin: auto;
@@ -110,12 +110,22 @@ margin-top: 2px;
 }
 
 #footer{
+  display: flex;
 height: 100px;
 background: #ADD8E6;
 border-top: #FFFFFF 2px solid;
 margin: 0;
 padding: 0;
 }
+
+#footer img{
+  margin-left: 50px;
+  margin-top: 5px;
+}
+
+#footer h5{
+margin-left: 500px;
+color: white;}
 
 /* Fond du gadget de la barre de recherche */
 .recherche_p {
@@ -188,6 +198,10 @@ padding-top: 0px;
 margin-top: 0px;
 }
 
+h3{
+  padding: 0px;
+  margin: 0px 0px 0px 10px;
+}
 
 
 .colonne-centre {

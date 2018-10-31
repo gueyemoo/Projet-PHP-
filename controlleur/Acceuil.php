@@ -22,25 +22,23 @@
   }else{
     $marque='';
   }
+
   $dispo=$_GET['dispo']??''; // ça fonctionne comme un isset verifie si il y a quelque chose dans $dispo sinon on affecte ' ' a $dispo
 
+  if(isset($_GET['vendeur']) ) {
+    $vendeur = $_GET['vendeur'];
+  }else{
+    $vendeur='';
+  }
 
-  // for ($i=$id; $i <$id+10 ; $i++) {
-  // $a = $dao->get($i);
-  // $centre[] = $a;
-  // }
 
-$centre=$dao->getArticleFiltre(10,$prix,$marque,$dispo);
+$centre=$dao->getArticleFiltre(10,$prix,$marque,$dispo,$vendeur);
   $marques = $dao->getMarques();
+  $vendeur = $dao->getVendeur();
 
-  $tailles = $dao->getTaille();
-
-  // $tailles = $dao->getTaille();
   $cover = '../modele/data/Images/';
-  //var_dump($tailles);
   require_once('../view/Acceuilview.php');
 
-  //Test
 
 
 
