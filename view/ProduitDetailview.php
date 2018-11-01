@@ -16,43 +16,13 @@
 
 <body>
   <div id="hd">
-    <div id="header"><h1> VMS SKI
-      <img src="../vms50.png" alt="logo"/>
-    </h1>
+    <?php include('header.php') ?>
+  </div>
 
-
-      <div class="recherche_p">
-
-        <form action="/search" id="searchthis" method="get">
-          <input id="search" name="q" type="text" placeholder="Que souhaitez vous rechercher ?" />
-          <!-- <input id="search-btn" type="submit" value="Rechercher" /> -->
-          <a href="#"><img src="../rechercher38.png" alt= "rechercher"></a>
-         </form>
-     </div>
-
-    </div>
-
-    <div id="BarreNav">
-      <ul id="nav">
-         <li id="nav-home"><a href="Acceuil.php">Accueil</a></li>
-         <li id="nav-ski"><a href="Categorie.php?cat=ski">Ski</a></li>
-         <li id="nav-snow"><a href="Categorie.php?cat=Snowboard">Snowboard</a></li>
-         <li id="nav-acc"><a href="Categorie.php?cat=Accessoires">Accessoires</a></li>
-         <li id="nav-vet"><a href="Categorie.php?cat=Vetements">Vetements</a></li>
-         <li id="nav-about"><a href="#">À propos</a></li>
-      </ul>
-
-    </div>
-
-    </div>
   <div id="body">
     <div class="colonne-gauche">
-<h2>Promotion</h2>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <!-- <h3 style="margin-left:20px;">Publicité</h3> -->
+        <img src="../pub1.jpg" alt="1er publicité" style="height:600px; width: 150%;">
       </div>
 
     <div class="colonne-centre">
@@ -76,18 +46,13 @@
     </div>
     </div>
     <div class="colonne-droite">
-<h2>Publicité</h2>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+      <h3>Publicité</h3>
+        <img src="../pub1.jpg" alt="1er publicité" style="height:600px; width: 150%;">
         </div>
   </div>
 
 <div id="ft">
-  <div id="footer"> FOOTER</div>
+<?php include('footer.php') ?>
 </div>
 </body>
 

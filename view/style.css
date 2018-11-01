@@ -207,3 +207,27 @@ h3{
 .colonne-centre {
   overflow: scroll;
 }
+
+input[type=submit] {
+background: #0066A2;
+color: white;
+border-style: outset;
+border-color: #0066A2;
+height: 50px;
+width: 150px;
+font: bold 15px arial, sans-serif;
+text-shadow:none;
+}
+
+input[type=submit]:hover {
+background: #016ABC;
+color: #fff;
+border: 1px solid #eee;
+box-shadow: 5px 5px 5px #eee;
+text-shadow:none;
+}
+
+label {
+font-weight: bold;
+float: left;
+}
