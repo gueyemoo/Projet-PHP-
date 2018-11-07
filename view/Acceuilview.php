@@ -79,17 +79,7 @@
                   <h4 style="width:150px; height: 25px;"><?=$a->reference ?></h4>&nbsp;
                 </div>
             <?php endforeach; ?>
-          <?php switch ($id) { case 1 : ?>
-            <center> <a href="Acceuil.php?id=<?=$id+10?> " > <label> Page suivante > </label> </a>
-          <?php break; case 10 : ?>
-            <center> <a href="Acceuil.php?id=<?=$id-9?>" > <label> < Page précédente  </label> </a>
-                     <a href="Acceuil.php?id=<?=$id+10?>"> <label> Page suivante > </label> </a> </center>
-          <?php break; case 91 : ?>
-            <center> <a href="Acceuil.php?id=<?=$id-10?>" > <label> < Page précédente  </label> </a>
-          <?php break; default : ?>
-          <center> <a href="Acceuil.php?id=<?=$id-10?>" > <label> < Page précédente  </label> </a>
-                   <a href="Acceuil.php?id=<?=$id+10?>"> <label> Page suivante > </label> </a> </center>
-          <?php break;} ?>
+  
         </div>
 
 

@@ -2,10 +2,8 @@
 #87CEFA	lightskyblue
 #F0FFFF	Azur brume */
 body{
-  width: 98%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
+margin: 0px;
+width: auto;
 }
 
 #hd{
@@ -37,14 +35,18 @@ margin-top: 2px;
 #nav{
   display:flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
 }
+
+
 /*Barre de navigation*/
 #BarreNav
 {
    padding:0;
    background: #ADD8E6;
    width: 100%;
+   display: flex;
+   justify-content: space-between;
+
 }
 
 #BarreNav li
@@ -80,7 +82,9 @@ margin-top: 2px;
 
 .colonne-gauche{
   height: 600px;
-  width: 250%;
+  flex-grow: 1;
+flex-basis: 5px;
+flex-shrink: 10;
   background: #cee5ed;
   border-top: #cee5ed 2px solid;
   margin: auto;
@@ -89,19 +93,28 @@ margin-top: 2px;
 }
 
 .colonne-centre{
+  justify-content: flex-start;
+display: flex;
+flex-wrap: wrap;
+flex-grow: 5;
+flex-basis: 150px;
+flex-shrink: 1;
   height: 600px;
-  width: 1300%;
   border-top: #cee5ed 2px solid;
   background: #cee5ed;
   margin: auto;
   margin-left: 5px;
   margin-right: 5px;
   padding: 3px;
+  overflow-y:auto;
 }
+
 
 .colonne-droite{
   height: 600px;
-  width: 150%;
+  flex-grow: 1;
+flex-basis: 5px;
+flex-shrink: 10;
   background: #cee5ed;
   border-top: #cee5ed 2px solid;
   margin: auto;
@@ -177,7 +190,7 @@ input {
 .Produit{
   display: inline-flex;
   flex-direction: column;
-  margin: 2px;
+  margin: 1%;
 }
 
 .LeProduit{
@@ -201,11 +214,6 @@ margin-top: 0px;
 h3{
   padding: 0px;
   margin: 0px 0px 0px 10px;
-}
-
-
-.colonne-centre {
-  overflow: scroll;
 }
 
 input[type=submit] {

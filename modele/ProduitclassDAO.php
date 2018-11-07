@@ -133,9 +133,75 @@ function read(int $id) : Produit{
     }
   }
 
+
+  function verifUser(string $pseudo, string $mdp):bool{
+    $requ="SELECT count(*) FROM Client WHERE pseudo='$pseudo' and mdp='$mdp'";
+    $res = $this->db->query($requ);
+    $result = $res->fetch();
+
+    if($result) {    //Pseudo et mdp correct
+      $requ2="SELECT * FROM Client WHERE pseudo='$pseudo' and mdp='$mdp'";
+      $res2 = $this->db->query($requ2);
+      $LeClient = $res2->fetchAll(PDO::FETCH_CLASS, "Client");
+
+      $_SESSION['connexion']=$LeClient[0];
+      $_SESSION['connecter']=true;
+
+
+    }
+
+    return $result['count(*)'];
+  }
+
+  function getFavoris(int $id):array{
+    $requ="SELECT * FROM Produit WHERE id in (select idProduit from Favoris where idClient=$id)";
+    $res = $this->db->query($requ);
+    $result = $res->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, "Produit");
+    return $result;
+  }
+
+  function ajoutFavoris(int $idClient, int $idProduit):bool{
+    $requ="SELECT count(*) FROM Produit WHERE id=$idProduit";
+    $res = $this->db->query($requ);
+    $result = $res->fetch()['count(*)'];
+    if($result){
+      $requ2="INSERT INTO Favoris VALUES($idClient,$idProduit) ";
+      $res2 = $this->db->query($requ2);
+      $result2 = $res->fetch();
+      var_dump($result2);
+
+    }
+
+    return $result2;
+  }
+
+  function deleteFavoris(int $idClient, int $idProduit):bool{
+    $requ="DELETE FROM Favoris WHERE idProduit=$idProduit AND idClient=$idClient";
+    var_dump($requ);
+    $res = $this->db->query($requ);
+    $result = $res->fetch();
+    var_dump($result);
+
+
+  return $result;
 }
+  function isFavoris(int $idClient, int $idProduit):bool{
+    $requ="SELECT count(*) FROM Favoris WHERE idClient=$idClient AND idProduit=$idProduit";
+    $res = $this->db->query($requ);
+    var_dump($res);
+    $result = $res->fetch();
+    var_dump($result);
+    return $result['count(*)'];
+  }
+
+
+
+}//fin de classe
 $config = parse_ini_file('../config/config.ini');
 $DAO= new ProduitDAO($config['database_path']);
+session_start();
+
+$idClient=$_SESSION['connexion']->id??0;
 
 
 ?>

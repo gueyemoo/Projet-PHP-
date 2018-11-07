@@ -28,4 +28,18 @@ string $reference="", string $taille="", string $vendeur="", string $disponibili
     $this->cover=$cover;
   }
 }
+
+
+/**
+ *
+ */
+class Client
+{
+
+  function __construct()
+  {
+    // code...
+  }
+}
+
 ?>

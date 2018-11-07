@@ -42,13 +42,25 @@
         <p>Taille: <?=$Produit->taille  ?> cm </p>
         <p>Vendeur:<?=$Produit->vendeur  ?></p>
         <p>Prix: <?=$Produit->prix  ?> €</p>
+        <br>
+        <br>
+        <?php if ($Favoris??0): ?>
+          <a href="../controlleur/MettreEnFavoris.php?idProduit=<?=$Produit->id ?>&action=delete">Retirer Favoris</a>
+          <?php else: ?>
+            <a href="../controlleur/MettreEnFavoris.php?idProduit=<?=$Produit->id ?>&action=add">Ajout Favoris</a>
+
+        <?php endif; ?>
       </div>
     </div>
+
+
+
+
     </div>
     <div class="colonne-droite">
       <h3>Publicité</h3>
-        <img src="../pub1.jpg" alt="1er publicité" style="height:600px; width: 150%;">
-        </div>
+      <img src="../pub1.jpg" alt="1er publicité" style="height:600px; width: 150%;">
+    </div>
   </div>
 
 <div id="ft">

@@ -16,11 +16,25 @@
 
 <div id="BarreNav">
 <ul id="nav">
-   <li id="nav-home"><a href="Acceuil.php">Accueil</a></li>
-   <li id="nav-ski"><a href="Categorie.php?cat=ski">Ski</a></li>
-   <li id="nav-snow"><a href="Categorie.php?cat=Snowboard">Snowboard</a></li>
-   <li id="nav-acc"><a href="Categorie.php?cat=Accessoires">Accessoires</a></li>
-   <li id="nav-vet"><a href="Categorie.php?cat=Vetements">Vetements</a></li>
-</ul>
+   <li id="nav-home"><a href="../controlleur/Acceuil.php">Accueil</a></li>
+   <li id="nav-ski"><a href="../controlleur/Categorie.php?cat=ski">Ski</a></li>
+   <li id="nav-snow"><a href="../controlleur/Categorie.php?cat=Snowboard">Snowboard</a></li>
+   <li id="nav-acc"><a href="../controlleur/Categorie.php?cat=Accessoires">Accessoires</a></li>
+   <li id="nav-vet"><a href="../controlleur/Categorie.php?cat=Vetements">Vetements</a></li>
+ </ul>
+<ul>
+
+   <?php if ($_SESSION['connecter']??0): ?>
+
+
+     <li id="nav-vet"><a href="../controlleur/Favoris.php?id=<?php print(($_SESSION['connexion'])->id) ?>">Favoris</a></li>
+     <li id="nav-vet"><a href="../controlleur/Deconnexion.php">Se déconnecter</a></li>
+
+     <?php else: ?>
+        <li id="nav-vet"><a href="../controlleur/Connexion.php">Coonexion</a></li>
+
+   <?php endif; ?>
+ </ul>
+
 
 </div>
