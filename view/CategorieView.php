@@ -40,12 +40,12 @@
             <center>
           <?php if (!array_key_exists($id-10,$categorie) && !array_key_exists($id+10,$categorie)){ ?>
           <?php } elseif (!array_key_exists($id-10,$categorie)) {?>
-             <a href="Categorie.php?id=<?=$id+10?>&cat=<?=$categorie[0]->categorie?>" > <label> Page suivante > </label> </a>
+             <a href="Categorie.php?id=<?=$id+10?>&cat=<?=$categorie[0]->categorie?>" > <img src="../modele/data/Bouton/droit.png" alt="image-fleche-de-droite"> </a>
           <?php } elseif (!array_key_exists($id+10,$categorie)) { ?>
-            <a href="Categorie.php?id=<?=$id-10?>&cat=<?=$categorie[0]->categorie?>" > <label> < Page précédente  </label> </a>
+            <a href="Categorie.php?id=<?=$id-10?>&cat=<?=$categorie[0]->categorie?>" > <img src="../modele/data/Bouton/gauche.png" alt="image-fleche-de-gauche"> </a>
           <?php } else { ?>
-          <a href="Categorie.php?id=<?=$id-10?>&cat=<?=$categorie[0]->categorie?>" > <label> < Page précédente  </label> </a>
-                   <a href="Categorie.php?id=<?=$id+10?>&cat=<?=$categorie[0]->categorie?>"> <label> Page suivante > </label> </a>
+          <a href="Categorie.php?id=<?=$id-10?>&cat=<?=$categorie[0]->categorie?>" > <img src="../modele/data/Bouton/gauche.png" alt="image-fleche-de-gauche"> </a>
+                   <a href="Categorie.php?id=<?=$id+10?>&cat=<?=$categorie[0]->categorie?>"> <img src="../modele/data/Bouton/droit.png" alt="image-fleche-de-droite"> </a>
           <?php } ?>
         </center>
         </div>

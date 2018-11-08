@@ -98,7 +98,8 @@ function read(int $id) : Produit{
 
 
     $requ="SELECT * FROM Produit WHERE 1 ".$requeteMarque.$requeteDispo.$requetePrix.$requeteVendeur;
-
+    print($requeteMarque);
+    print($requeteDispo);
     //var_dump($requ); // pour voir la requete effectuer par les filtres
     $res = $this->db->query($requ);
     $result = $res->fetchAll(PDO::FETCH_CLASS|PDO::FETCH_PROPS_LATE, "Produit");
@@ -167,8 +168,6 @@ function read(int $id) : Produit{
       $requ2="INSERT INTO Favoris VALUES($idClient,$idProduit) ";
       $res2 = $this->db->query($requ2);
       $result2 = $res->fetch();
-      var_dump($result2);
-
     }
 
     return $result2;
@@ -191,10 +190,8 @@ function read(int $id) : Produit{
 
   function deleteFavoris(int $idClient, int $idProduit):bool{
     $requ="DELETE FROM Favoris WHERE idProduit=$idProduit AND idClient=$idClient";
-    var_dump($requ);
     $res = $this->db->query($requ);
     $result = $res->fetch();
-    var_dump($result);
 
 
   return $result;
@@ -202,9 +199,7 @@ function read(int $id) : Produit{
   function isFavoris(int $idClient, int $idProduit):bool{
     $requ="SELECT count(*) FROM Favoris WHERE idClient=$idClient AND idProduit=$idProduit";
     $res = $this->db->query($requ);
-    var_dump($res);
     $result = $res->fetch();
-    var_dump($result);
     return $result['count(*)'];
   }
 
