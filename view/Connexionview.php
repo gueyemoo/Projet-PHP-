@@ -29,13 +29,19 @@
           </div>
 
         <div class="colonne-centre">
+       <center>
+          <div>
           <form class="connexion" action="../controlleur/Connexion.php" method="post">
             <label for="Pseudo">Pseudo </label>
             <input type="text" name="pseudo" value="" id="Pseudo">
+          </div>
+          <div
             <label for="mdp">Mot de passe</label>
             <input type="password" name="mdp" value="" id="mdp">
+          </div>
             <p><input type="submit" value="Valider"></p> <br>
           </form>
+        </center>
 
 
 
