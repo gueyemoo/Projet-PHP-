@@ -10,13 +10,13 @@ foreach ($_POST as $key => $value) {
 }
 
 if ($_POST??0) {
-    if (  $DAO->verifUser($_POST['pseudo'],$_POST['mdp'])) {
+    if (  $DAO->verifUser($_POST['pseudo'],$_POST['mdp'])) { //On vérifie si le client a saisi le bon pseudo et mot de passe
         // print("Connexion réussi");
-        header('Location:../controlleur/Acceuil.php');
+        header('Location:../controlleur/Acceuil.php'); //On le redirige vers la page d'acceuil si reussi
 
     }else{
               // print("Connexion échoué");
-              require_once('../view/Connexionview.php');
+              require_once('../view/Connexionview.php');//On le garde a la page de connexion si echec
 
     }
 }else{

@@ -34,7 +34,7 @@
                 <option value="0" selected>Toutes les marques</option>
                 <?php foreach ($marques as $m):?>
                     <option value="<?=$m?>"><?= $m ?></option>
-
+                    <!-- on affiche les marques pour le choix des filtres-->
                 <?php endforeach; ?>
               </select>
               <br>
@@ -43,9 +43,9 @@
                   <?php
                   echo '<select name="prix">',"\n";
                   echo '<option value = "100000000" selected="selected"> tous les prix</option>';
+                  //On affiche les différents filtres pour le prix
                   foreach ($listePrix as $affiche => $prix)
                   {
-
                         echo "\t".'<option value="'.$prix .'"'.'>'. $affiche .'</option>'."\n";
                   }
                   echo '</select>',"\n";
@@ -57,12 +57,13 @@
                     <option value="0" selected>Tous les vendeurs</option>
                     <?php foreach ($vendeur as $v):?>
                         <option value="<?=$v?>"><?= $v ?></option>
-
+                        <!-- on affiche les vendeurs pour le choix des filtres -->
                     <?php endforeach; ?>
                   </select>
                   <br><br>
                   <label for="dispo">Disponible</label>
                   <input type="checkbox" name="dispo" value="Oui" id=dispo>
+                  <!-- Checkbox pour que le client choisissent si il veut voir que les produits Disponible -->
                   <p><input type="submit" value="Valider"></p> <br>
             </fieldset>
             </form>
@@ -70,6 +71,7 @@
 
         <div class="colonne-centre">
 
+          <!-- On affiche tout les produits -->
           <?php foreach ($centre as $a) : ?>
             <div class="Produit">
               <a href="ProduitDetailctrl.php?id=<?=$a->id?>">
@@ -84,6 +86,7 @@
 
 
         <div class="colonne-droite">
+          <!-- On inclus les publicité interactive -->
           <?php include('asidePub.php') ?>
         </div>
 
@@ -91,6 +94,7 @@
 
       </div>
 
+      <!-- On inclus le footer -->
       <div id="ft">
       <?php include('footer.php') ?>
       </div>

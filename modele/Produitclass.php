@@ -1,4 +1,5 @@
 <?php
+//On crée la classe produit
 class Produit
 {
   public $id;
@@ -33,6 +34,8 @@ string $reference="", string $taille="", string $vendeur="", string $disponibili
 /**
  *
  */
+
+ //On crée la classe Client
 class Client
 {
 

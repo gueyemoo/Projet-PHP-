@@ -28,6 +28,7 @@
           </div>
 
         <div class="colonne-centre">
+          <!-- systeme de connexion -->
        <center>
           <div>
           <form class="connexion" action="../controlleur/Connexion.php" method="post">

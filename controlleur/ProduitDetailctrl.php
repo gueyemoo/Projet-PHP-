@@ -1,15 +1,13 @@
 <?php
 require_once('../modele/ProduitclassDAO.php');
-//var_dump($DAO->nb());
 $id=max(($_GET['id']??1),1);
 $id=min($id,$DAO->nb());
-$Produit = $DAO->get($id);
+$Produit = $DAO->get($id); //On recupere l'identifiant du produit
 $firstId=$_GET['firstId']??1;
-$route='../modele/data/Images/'.$Produit->cover;
+$route='../modele/data/Images/'.$Produit->cover;//On recupere le chemin vers l'image
 
 if($idClient){
-  $Favoris=$DAO->isFavoris($idClient,$id);
-  // var_dump($DAO->isFavoris($idClient,$id));
+  $Favoris=$DAO->isFavoris($idClient,$id);//On verifie que le produit est dans la liste des favoris
 }
-include('../view/ProduitDetailview.php');
+include('../view/ProduitDetailview.php');//On inclus la vue du produit détaillé
  ?>

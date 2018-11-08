@@ -19,15 +19,18 @@
   <div id="page" class="A1">
 
     <div id="hd">
+      <!-- On inclus l'en-tête -->
       <?php include('header.php') ?>
     </div>
 
       <div id="body">
         <div class="colonne-gauche">
+          <!-- On affiche une publicité (parmis les 4) au hasard   -->
           <?php include('asidePub.php') ?>
           </div>
 
         <div class="colonne-centre">
+          <!-- On affiche les produits de cette categorie -->
           <?php foreach ($centre as $a) : ?>
             <div class="Produit">
               <a href="ProduitDetailctrl.php?id=<?=$a->id?>">
@@ -38,6 +41,7 @@
                 </div>
             <?php endforeach; ?>
             <center>
+              <!-- Systeme de pagination -->
           <?php if (!array_key_exists($id-10,$categorie) && !array_key_exists($id+10,$categorie)){ ?>
           <?php } elseif (!array_key_exists($id-10,$categorie)) {?>
              <a href="Categorie.php?id=<?=$id+10?>&cat=<?=$categorie[0]->categorie?>" > <img src="../modele/data/Bouton/droit.png" alt="image-fleche-de-droite"> </a>
@@ -51,6 +55,7 @@
         </div>
 
         <div class="colonne-droite">
+          <!-- On affiche une publicité (parmis les 4) au hasard   -->
           <?php include('asidePub.php') ?>
       </div>
   </div>

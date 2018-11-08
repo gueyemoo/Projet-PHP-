@@ -1,11 +1,11 @@
 <?php
-require_once('../modele/ProduitclassDAO.php');
+require_once('../modele/ProduitclassDAO.php');// inclus la class Produit DAO
 
 $dao = new ProduitDAO();
 $centre = array();
-$marques = $dao->getMarques();
-$cover = '../modele/data/Images/';
-$categorie = $dao->getCategorie($_GET['cat']);
+$marques = $dao->getMarques();//On récupere tout les marques présente
+$cover = '../modele/data/Images/'; //Chemin vers les images
+$categorie = $dao->getCategorie($_GET['cat']);//On récupere la catégorie selectionner par le client
 $id = 1;
 
 

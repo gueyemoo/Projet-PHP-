@@ -28,6 +28,7 @@
         </div>
 
         <div class="colonne-centre">
+          <!-- On affiche les articles favoris du client connecter  -->
           <?php foreach ($LesArticlesFavoris as $a) : ?>
             <div class="Produit">
               <a href="ProduitDetailctrl.php?id=<?=$a->id?>">
