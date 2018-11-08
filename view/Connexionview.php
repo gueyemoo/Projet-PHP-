@@ -24,8 +24,7 @@
 
       <div id="body">
         <div class="colonne-gauche">
-          <!-- <h3 style="margin-left:20px;">Publicité</h3> -->
-            <img src="../pub1.jpg" alt="1er publicité" style="height:600px; width: 150%;">
+          <?php include('asidePub.php') ?>
           </div>
 
         <div class="colonne-centre">
@@ -43,20 +42,10 @@
           </form>
         </center>
 
-
-
-
-
-
-
-
-
-
-
         </div>
 
         <div class="colonne-droite">
-             <img src="../pub2.jpg" alt="2ieme publicité" style="height:600px; width: 150%;">
+          <?php include('asidePub.php') ?>
       </div>
   </div>
 

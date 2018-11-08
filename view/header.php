@@ -24,15 +24,14 @@
  </ul>
 <ul>
 
-   <?php if ($_SESSION['connecter']??0): ?>
+   <?php if ($_SESSION['connecter']->id!=$idClient): ?>
 
 
      <li id="nav-vet"><a href="../controlleur/Favoris.php?id=<?php print(($_SESSION['connexion'])->id) ?>">Favoris</a></li>
      <li id="nav-vet"><a href="../controlleur/Deconnexion.php">Se déconnecter</a></li>
 
      <?php else: ?>
-        <li id="nav-vet"><a href="../controlleur/Connexion.php">Coonexion</a></li>
-
+        <li id="nav-vet"><a href="../controlleur/Connexion.php">Se Connecter</a></li>
    <?php endif; ?>
  </ul>
 

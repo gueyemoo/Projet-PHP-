@@ -149,7 +149,6 @@ function read(int $id) : Produit{
 
 
     }
-
     return $result['count(*)'];
   }
 
@@ -174,6 +173,21 @@ function read(int $id) : Produit{
 
     return $result2;
   }
+
+
+  // function ajoutClient(string $pseudo, string $mdp)
+  // {
+  //     $requeteSQL = 'SELECT max(id) FROM client';
+  //     $reponseDeRequete=$this->db->query($requeteSQL);
+  //     $max= $reponseDeRequete->fetch()[0];
+  //     $idClient= intval($max)+1;
+  //
+  //   $requ2="INSERT INTO Client VALUES($idClient,$pseudo,$mdp)";
+  //   var_dump($requ2);
+  //   $res2=$this->db->query($requ2);
+  //   $result2= $res2->fetch();
+  //   var_dump($result2);
+  // }
 
   function deleteFavoris(int $idClient, int $idProduit):bool{
     $requ="DELETE FROM Favoris WHERE idProduit=$idProduit AND idClient=$idClient";

@@ -79,14 +79,13 @@
                   <h4 style="width:150px; height: 25px;"><?=$a->reference ?></h4>&nbsp;
                 </div>
             <?php endforeach; ?>
-  
+
         </div>
 
 
         <div class="colonne-droite">
-          <h3>Publicité</h3>
-            <img src="../pub1.jpg" alt="1er publicité" style="height:600px; width: 150%;">
-            </div>
+          <?php include('asidePub.php') ?>
+        </div>
 
             </div>
 
